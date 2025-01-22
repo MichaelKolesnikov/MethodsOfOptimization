@@ -1,0 +1,91 @@
+\documentclass[17pt]{extarticle}
+\usepackage{../mystyle}
+\usepackage{array} % Для таблиц
+
+\begin{document}
+
+\section{Преобразования форм задач ЛП}
+
+\subsection{1. Изменение направления оптимизации}
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Исходная задача}                   & \textbf{Эквивалентная задача}               \\
+        \hline
+        \( \sum\limits_{j=1}^n c_j x_j \to \min \) & \( -\sum\limits_{j=1}^n c_j x_j \to \max \) \\
+        \hline
+    \end{tabular}
+\end{center}
+
+Оптимальные решения исходной задачи и задачи, полученной в результате преобразования, будут совпадать, однако оптимальные значения целевых функций будут иметь противоположные знаки.
+
+\subsection{2. Придание ограничениям-неравенствам противоположного направления}
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Исходная задача}                     & \textbf{Эквивалентная задача}                  \\
+        \hline
+        \( \sum\limits_{j=1}^n a_{ij} x_j \ge b_i \) & \( -\sum\limits_{j=1}^n a_{ij} x_j \le -b_i \) \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection{3. Наложение на переменные требования неотрицательности}
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Исходная задача}        & \textbf{Эквивалентная задача}                                          \\
+        \hline
+        \( x_j \) не ограничена в знаке & Замена переменной: \( x_j = x_j^1 - x_j^2, \quad x_j^1, x_j^2 \ge 0 \) \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection{4. Замена уравнений неравенствами}
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Исходная задача}                   & \textbf{Эквивалентная задача} \\
+        \hline
+        \( \sum\limits_{j=1}^n a_{ij} x_j = b_i \) &
+        \(
+        \begin{cases}
+            \sum\limits_{j=1}^n a_{ij} x_j \le b_i \\
+            -\sum\limits_{j=1}^n a_{ij} x_j \le -b_i
+        \end{cases}
+        \)                                                                         \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection{5. Замена нестрогих неравенств уравнениями}
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Исходная задача}                     & \textbf{Эквивалентная задача} \\
+        \hline
+        \( \sum\limits_{j=1}^n a_{ij} x_j \le b_i \) &
+        \(
+        \begin{cases}
+            \sum\limits_{j=1}^n a_{ij} x_j + x_{n+1} = b_i \\
+            x_{n+1} \ge 0
+        \end{cases}
+        \)                                                                           \\
+        \hline
+        \( \sum\limits_{j=1}^n a_{ij} x_j \ge b_i \) &
+        \(
+        \begin{cases}
+            \sum\limits_{j=1}^n a_{ij} x_j - x_{n+1} = b_i \\
+            x_{n+1} \ge 0
+        \end{cases}
+        \)                                                                           \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\end{document}

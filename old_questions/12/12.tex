@@ -1,0 +1,29 @@
+\documentclass[17pt]{extarticle}
+\usepackage{../mystyle}
+
+\begin{document}
+
+\section{Базисные и свободные переменные в задаче ЛП}
+
+Рассмотрим задачу ЛП в канонической форме:
+\[
+    \begin{cases}
+        (c, x) \to \max \\
+        A x = b         \\
+        x \ge 0
+    \end{cases}
+\]
+Пусть \( A \in \mathbb{R}^{m \times n} \). Предполагается, что \( m < n \) и что \( \text{rang}\, A = m \). Тогда можно выбрать из этой матрицы базисный минор \( B \in \mathbb{R}^{m \times m} \). Оставшиеся столбцы матрицы обозначим как \( N \in \mathbb{R}^{m \times (n - m)} \).
+
+Такая операция разделит неизвестные на базисные и свободные:
+\[
+    x^B = \begin{pmatrix} x_1 \\ \vdots \\ x_m \end{pmatrix}, \quad
+    x^N = \begin{pmatrix} x_{m+1} \\ \vdots \\ x_n \end{pmatrix}.
+\]
+
+С учётом введённых обозначений ограничения можно описать в виде матричного уравнения:
+\[
+    B x^B + N x^N = b
+\]
+
+\end{document}

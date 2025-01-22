@@ -1,0 +1,95 @@
+\documentclass[17pt]{extarticle}
+\usepackage{../mystyle}
+
+\begin{document}
+\section{Приведение задачи линейного программирования к каноническому виду. Формы записи задач ЛП.}
+\begin{definition}
+    Задачу ЗЛП, представленную в виде
+    \(
+    f = C_1 X_1 + C_2 X_2 + \cdots + C_n X_n \xrightarrow{?} \max(\min), x = (x_1, \ldots, x_n) \colon x_i \geq 0, i=\overline{1,n} \)
+    \[
+        \begin{cases}
+            a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\
+            a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\
+            \vdots                                           \\
+            a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m
+        \end{cases}
+    \]
+    называется \textbf{канонической ЗЛП}.
+\end{definition}
+
+\begin{algorithm}
+    \caption{Приведение ЗЛП к каноническому виду}
+    \begin{algorithmic}[1]
+        \If{\( f \to \max \)}
+        \State Заменить \( f \) на \( -f \) и минимизировать: \( f \to \min \).
+        \EndIf
+
+        \For{каждого ограничения \( i = 1, 2, \dots, m \)}
+        \If{\( R_i = \leq \)}
+        \State Добавить неотрицательную дополнительную переменную \( s_i \geq 0 \):
+        \[
+            a_{i1}x_1 + a_{i2}x_2 + \cdots + a_{in}x_n + s_i = b_i.
+        \]
+        \ElsIf{\( R_i = \geq \)}
+        \State Вычесть неотрицательную дополнительную переменную \( s_i \geq 0 \):
+        \[
+            a_{i1}x_1 + a_{i2}x_2 + \cdots + a_{in}x_n - s_i = b_i.
+        \]
+        \EndIf
+        \EndFor
+
+        \For{каждой переменной \( x_j, j = 1, 2, \dots, n \)}
+        \If{\( x_j \) не ограничена по знаку}
+        \State Заменить \( x_j \) на \( x_j^+ - x_j^- \), где \( x_j^+ \geq 0 \), \( x_j^- \geq 0 \).
+        \EndIf
+        \EndFor
+    \end{algorithmic}
+\end{algorithm}
+
+Виды задач линейного программирования (ЛП)
+\begin{enumerate}
+    \item Общего вида
+          \[
+              \begin{cases}
+                  \sum\limits_{j=1}^{n} c_j x_j \to \max                                 \\
+                  \sum\limits_{j=1}^{n} a_{ij} x_j \le b_i, \quad i = \overline{1,m_1}   \\
+                  \sum\limits_{j=1}^{n} a_{ij} x_j = b_i, \quad i = \overline{m_1+1,m_2} \\
+                  \sum\limits_{j=1}^{n} a_{ij} x_j \ge b_i, \quad i = \overline{m_2+1,m}
+              \end{cases}
+          \]
+    \item Неотрицательных переменных
+          \[
+              \begin{cases}
+                  \sum\limits_{j=1}^{n} c_j x_j \to \max                               \\
+                  \sum\limits_{j=1}^{n} a_{ij} x_j \le b_i, \quad i = \overline{1,m_1} \\
+                  \sum\limits_{j=1}^{n} a_{ij} x_j = b_i, \quad i = \overline{m_1+1,m} \\
+                  x_j \ge 0, \quad j = \overline{1,n}
+              \end{cases}
+          \]
+    \item Стандартная форма
+          \[
+              \begin{cases}
+                  \sum\limits_{j=1}^{n} c_j x_j \to \max                             \\
+                  \sum\limits_{j=1}^{n} a_{ij} x_j \le b_i, \quad i = \overline{1,m} \\
+                  x_j \ge 0, \quad j = \overline{1,n}
+              \end{cases}
+          \]
+    \item Каноническая форма
+          \[
+              \begin{cases}
+                  \sum\limits_{j=1}^{n} c_j x_j \to \max                           \\
+                  \sum\limits_{j=1}^{n} a_{ij} x_j = b_i, \quad i = \overline{1,m} \\
+                  x_j \ge 0, \quad j = \overline{1,n}
+              \end{cases}
+          \]
+    \item Матричная стандартная форма
+          \[
+              \begin{cases}
+                  f=(c, x) \to \max \\
+                  A x \le b         \\
+                  x \ge 0
+              \end{cases}
+          \]
+\end{enumerate}
+\end{document}

@@ -1,0 +1,60 @@
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage[russian]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage[table]{xcolor}
+\usepackage{longtable}
+\usepackage{array}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    left=5mm,
+    right=5mm,
+    top=5mm,
+    bottom=5mm
+}
+
+% Настройки заголовков
+\usepackage{titlesec}
+
+% Настройка отступов для заголовков
+\titleformat{\section}
+{\normalfont\Large\bfseries} % Формат шрифта
+{\thesection} % Нумерация
+{1em} % Расстояние между номером и заголовком
+{} % Заголовок
+[\vspace{-0.5em}] % Отступ после заголовка (отрицательный для уменьшения)
+\titlespacing*{\section}{0pt}{0.5em}{0.5em} % {left}{before}{after}
+
+\titleformat{\subsection}
+{\normalfont\large\bfseries} % Формат шрифта
+{\thesubsection} % Нумерация
+{1em} % Расстояние между номером и заголовком
+{} % Заголовок
+[\vspace{-0.5em}] % Отступ после заголовка (отрицательный для уменьшения)
+\titlespacing*{\subsection}{0pt}{0.5em}{0.5em} % {left}{before}{after}
+
+\titleformat{\subsubsection}
+{\normalfont\normalsize\bfseries} % Формат шрифта
+{\thesubsubsection} % Нумерация
+{1em} % Расстояние между номером и заголовком
+{} % Заголовок
+[\vspace{-0.5em}] % Отступ после заголовка
+\titlespacing*{\subsubsection}{0pt}{0.5em}{0.5em} % {left}{before}{after}
+
+\usepackage{amsthm}
+\newtheorem{definition}{Определение}
+\newtheorem{lemma}{Лемма}
+\newtheorem{theorem}{Теорема}
+\newtheorem{criterion}{Критерий}
+\newtheorem{proposition}{Утверждение}
+\newtheorem{corollary}{Следствие}
+\newtheorem{example}{Пример}
+
+\usepackage{graphicx}
+
+\usepackage{cancel}

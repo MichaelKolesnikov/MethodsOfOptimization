@@ -1,0 +1,229 @@
+\documentclass[17pt]{extarticle}
+\usepackage{../mystyle}
+
+\begin{document}
+
+\section*{Работа №5}
+\subsection*{Транспортная задача}
+
+Требуется найти такой план перевозок продукции от поставщиков к потребителям, который обеспечивал бы спрос потребителей и вывоз продукции от поставщиков при минимальных суммарных транспортных расходах.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{c|ccccc|c}
+        \toprule
+                    & B1 & B2  & B3 & B4  & B5 & Запасы \\
+        \midrule
+        A1          & 3  & 3   & 5  & 3   & 3  & 150    \\
+        A2          & 7  & 3   & 6  & 1   & 3  & 50     \\
+        A3          & 2  & 8   & 7  & 2   & 9  & 100    \\
+        A4          & 1  & 3   & 9  & 6   & 4  & 100    \\
+        \midrule
+        Потребности & 50 & 150 & 50 & 100 & 50 &        \\
+        \bottomrule
+    \end{tabular}
+    \caption{Исходные данные транспортной задачи}
+\end{table}
+
+\subsection*{Нахождение первого опорного решения}
+
+\[
+    \sum \text{потребностей} = 400
+\]
+\[
+    \sum \text{запасов} = 400 = \sum \text{потребностей} \Rightarrow
+\]
+Задача является задачей с правильным балансом.
+
+\subsubsection*{Метод северо-западного угла}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{c|ccccc|c}
+        \toprule
+                    & B1     & B2      & B3     & B4     & B5     & Запасы \\
+        \midrule
+        A1          & 3 \ 50 & 3 \ 100 & 5      & 3      & 3      & 150    \\
+        A2          & 7      & 3 \ 50  & 6      & 1      & 3      & 50     \\
+        A3          & 2      & 8 \ 0   & 7 \ 50 & 2 \ 50 & 9      & 100    \\
+        A4          & 1      & 3       & 9      & 6 \ 50 & 4 \ 50 & 100    \\
+        \midrule
+        Потребности & 50     & 150     & 50     & 100    & 50     &        \\
+        \bottomrule
+    \end{tabular}
+    \caption{Опорное решение методом северо-западного угла}
+\end{table}
+
+Получили решение:
+\[
+    F = 50 \cdot 3 + 100 \cdot 3 + 50 \cdot 3 + 0 \cdot 8 + 50 \cdot 7 + 50 \cdot 2 + 50 \cdot 6 + 50 \cdot 4 = 1550
+\]
+
+\subsubsection*{Метод минимальных элементов}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{c|ccccc|c}
+        \toprule
+                    & B1     & B2      & B3     & B4     & B5     & Запасы \\
+        \midrule
+        A1          & 3      & 3 \ 100 & 5      & 3      & 3 \ 50 & 150    \\
+        A2          & 7      & 3 \ 0   & 6      & 1 \ 50 & 3      & 50     \\
+        A3          & 2      & 8       & 7 \ 50 & 2 \ 50 & 9      & 100    \\
+        A4          & 1 \ 50 & 3 \ 50  & 9      & 6      & 4      & 100    \\
+        \midrule
+        Потребности & 50     & 150     & 50     & 100    & 50     &        \\
+        \bottomrule
+    \end{tabular}
+    \caption{Опорное решение методом минимальных элементов}
+\end{table}
+
+Получили решение:
+\[
+    F = 100 \cdot 3 + 50 \cdot 3 + 50 \cdot 1 + 0 \cdot 8 + 50 \cdot 7 + 50 \cdot 2 + 50 \cdot 1 + 50 \cdot 3 = 1150
+\]
+
+\subsection*{Метод потенциалов}
+
+\subsubsection*{Возьмем опорное решение, полученное методом минимального элемента}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{c|ccccc|c}
+        \toprule
+                    & 1      & 3       & 6      & 1      & 3      & Запасы \\
+        \midrule
+        0           & 3      & 3 \ 100 & 5 p=-1 & 3      & 3 \ 50 & 150    \\
+        0           & 7      & 3 \ 0   & 6      & 1 \ 50 & 3      & 50     \\
+        1           & 2      & 8       & 7 \ 50 & 2 \ 50 & 9      & 100    \\
+        0           & 1 \ 50 & 3 \ 50  & 9      & 6      & 4      & 100    \\
+        \midrule
+        Потребности & 50     & 150     & 50     & 100    & 50     &        \\
+        \bottomrule
+    \end{tabular}
+    \caption{Первый шаг метода потенциалов}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{c|ccccc|c}
+        \toprule
+                    & 1      & 3      & 5      & 0       & 3      & Запасы \\
+        \midrule
+        0           & 3      & 3 \ 50 & 5 \ 50 & 3       & 3 \ 50 & 150    \\
+        0           & 7      & 3 \ 50 & 6      & 1       & 3      & 50     \\
+        2           & 2 p=-1 & 8      & 7 \ 0  & 2 \ 100 & 9      & 100    \\
+        0           & 1 \ 50 & 3 \ 50 & 9      & 6       & 4      & 100    \\
+        \midrule
+        Потребности & 50     & 150    & 50     & 100     & 50     &        \\
+        \bottomrule
+    \end{tabular}
+    \caption{Второй шаг метода потенциалов}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{c|ccccc|c}
+        \toprule
+                    & 1      & 3      & 5      & 1       & 3      & Запасы \\
+        \midrule
+        0           & 3      & 3 \ 50 & 5 \ 50 & 3       & 3 \ 50 & 150    \\
+        0           & 7      & 3 \ 50 & 6      & 1       & 3      & 50     \\
+        1           & 2 \ 0  & 8      & 7      & 2 \ 100 & 9      & 100    \\
+        0           & 1 \ 50 & 3 \ 50 & 9      & 6       & 4      & 100    \\
+        \midrule
+        Потребности & 50     & 150    & 50     & 100     & 50     &        \\
+        \bottomrule
+    \end{tabular}
+    \caption{Третий шаг метода потенциалов}
+\end{table}
+
+Теперь все \(\Delta_{i,j} = c_{i,j} - u_i - v_j \geq 0 \Rightarrow\)  найдено оптимальное решение.
+
+Ответ:
+\[
+    X =
+    \begin{pmatrix}
+        0  & 50 & 50 & 0   & 50 \\
+        0  & 50 & 0  & 0   & 0  \\
+        0  & 0  & 0  & 100 & 0  \\
+        50 & 50 & 0  & 0   & 0  \\
+    \end{pmatrix}
+\]
+\[
+    F_{\text{min}} = 3 \cdot 50 + 5 \cdot 50 + 3 \cdot 50 + 3 \cdot 50 + 2 \cdot 100 + 1 \cdot 50 + 3 \cdot 50 = 1100
+\]
+
+\subsection*{Решение с помощью кода}
+
+\begin{verbatim}
+from pulp import LpProblem, LpMinimize, LpVariable, lpSum, LpStatus    
+suppliers = ['A1', 'A2', 'A3', 'A4']  
+customers = ['B1', 'B2', 'B3', 'B4', 'B5']  
+  supply = {  
+    'A1': 150,  
+    'A2': 50,  
+    'A3': 100,  
+    'A4': 100  
+}    
+demand = {  
+    'B1': 50,  
+    'B2': 150,  
+    'B3': 50,  
+    'B4': 100,  
+    'B5': 50  
+}    
+costs = {  
+    ('A1', 'B1'): 3, ('A1', 'B2'): 3, ('A1', 'B3'): 5, ('A1', 'B4'): 3, ('A1', 'B5'): 3,  
+    ('A2', 'B1'): 7, ('A2', 'B2'): 3, ('A2', 'B3'): 6, ('A2', 'B4'): 1, ('A2', 'B5'): 3,  
+    ('A3', 'B1'): 2, ('A3', 'B2'): 8, ('A3', 'B3'): 7, ('A3', 'B4'): 2, ('A3', 'B5'): 9,  
+    ('A4', 'B1'): 1, ('A4', 'B2'): 3, ('A4', 'B3'): 9, ('A4', 'B4'): 6, ('A4', 'B5'): 4  
+}  
+prob = LpProblem("Transportation_Problem", LpMinimize)  
+  
+# Decision variables: x[supplier][customer]  
+x = LpVariable.dicts("Shipments", [(s, c) for s in suppliers for c in customers], lowBound=0, cat='Continuous')  
+  
+# Objective function: minimize total transportation cost  
+prob += lpSum([costs[(s, c)] * x[(s, c)] for s in suppliers for c in customers]), "Total_Cost"  
+  
+# Supply constraints  
+for s in suppliers:  
+    prob += lpSum([x[(s, c)] for c in customers]) <= supply[s], f"Supply_{s}"  
+  
+# Demand constraints  
+for c in customers:  
+    prob += lpSum([x[(s, c)] for s in suppliers]) >= demand[c], f"Demand_{c}"  
+  
+# Solve the problem  
+prob.solve()  
+  
+# Check the status of the solution  
+print("Status:", LpStatus[prob.status])  
+  
+# Print the optimal shipment amounts and total cost  
+print("Optimal Shipments:")  
+for s in suppliers:  
+    for c in customers:  
+        if x[(s, c)].varValue > 0:  
+            print(f"{s} -> {c}: {x[(s, c)].varValue}")  
+  
+print(f"\nTotal Minimum Cost: {prob.objective.value()}")
+\end{verbatim}
+
+\textbf{Вывод:}
+\begin{verbatim}
+Status: Optimal
+Optimal Shipments:
+A1 -> B2: 50.0
+A1 -> B3: 50.0
+A1 -> B5: 50.0
+A2 -> B2: 50.0
+A3 -> B4: 100.0
+A4 -> B1: 50.0
+A4 -> B2: 50.0
+
+Total Minimum Cost: 1100.0
+\end{verbatim}
+
+\end{document}

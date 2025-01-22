@@ -1,0 +1,55 @@
+\documentclass[17pt]{extarticle}
+\usepackage{../mystyle}
+
+\begin{document}
+
+\section{Виды задач линейного программирования (ЛП)}
+
+\subsection{Общего вида}
+\[
+    \begin{cases}
+        \sum\limits_{j=1}^{n} c_j x_j \to \max                                 \\
+        \sum\limits_{j=1}^{n} a_{ij} x_j \le b_i, \quad i = \overline{1,m_1}   \\
+        \sum\limits_{j=1}^{n} a_{ij} x_j = b_i, \quad i = \overline{m_1+1,m_2} \\
+        \sum\limits_{j=1}^{n} a_{ij} x_j \ge b_i, \quad i = \overline{m_2+1,m}
+    \end{cases}
+\]
+
+\subsection{1. Неотрицательных переменных}
+\[
+    \begin{cases}
+        \sum\limits_{j=1}^{n} c_j x_j \to \max                               \\
+        \sum\limits_{j=1}^{n} a_{ij} x_j \le b_i, \quad i = \overline{1,m_1} \\
+        \sum\limits_{j=1}^{n} a_{ij} x_j = b_i, \quad i = \overline{m_1+1,m} \\
+        x_j \ge 0, \quad j = \overline{1,n}
+    \end{cases}
+\]
+
+\subsection{2. Стандартная форма}
+\[
+    \begin{cases}
+        \sum\limits_{j=1}^{n} c_j x_j \to \max                             \\
+        \sum\limits_{j=1}^{n} a_{ij} x_j \le b_i, \quad i = \overline{1,m} \\
+        x_j \ge 0, \quad j = \overline{1,n}
+    \end{cases}
+\]
+
+\subsection{3. Каноническая форма}
+\[
+    \begin{cases}
+        \sum\limits_{j=1}^{n} c_j x_j \to \max                           \\
+        \sum\limits_{j=1}^{n} a_{ij} x_j = b_i, \quad i = \overline{1,m} \\
+        x_j \ge 0, \quad j = \overline{1,n}
+    \end{cases}
+\]
+
+\subsection{4. Матричная стандартная форма}
+\[
+    \begin{cases}
+        (c, x) \to \max \\
+        A x \le b       \\
+        x \ge 0
+    \end{cases}
+\]
+
+\end{document}
