@@ -2,5 +2,28 @@
 \usepackage{../mystyle}
 
 \begin{document}
-
+\section{Метод динамического программирования \\ решения задачи о рюкзаке. Постановка задачи. Рекуррентные соотношения Беллмана.}
+\subsection*{Задача о рюкзаке}
+Имеется рюкзак грузоподъемностью W.
+$weight_i$ – вес одного предмета i-ого типа,
+$cost_i$ – стоимость (ценность) одного предмета i-ого типа,
+$x_i$ – число предметов i-ого типа, которые будут загружаться на транспортировочное средство.
+Требуется заполнить его грузом, состоящим из предметов N различных типов таким образом, чтобы стоимость (ценность) всего груза была максимальной.
+\[
+    \begin{aligned}
+        W(x)=\sum_{i=1}^{N} x_i \cdot cost_i \rightarrow max \\
+        \sum_{i=1}^{N} x_i \cdot weight_i \leq W, \quad x_i \in \{0\} \cup \mathbb{N}
+    \end{aligned}
+\]
+Решение задачи разбивается на N этапов. На каждом i-ом этапе определяется максимальная стоимость груза,
+состоящего из предметов типа $k=\overline{1,i}$
+\subsection*{Рекуррентное уравнение Беллмана для задачи о рюкзаке}
+$W_i(weight)$ - максимальная стоимость груза, состоящего из предметов типа $k=\overline{1,i}$ с общим весом не более $weight$.
+\[
+    \begin{aligned}
+         & \forall \ weight \colon \ weight \in \overline{0,W}                                                                                         \\
+         & W_i(weight) = \max_{x_i \in \overline{0, \left[\frac{weight}{weight_i}\right]}} \{x_i \cdot cost_i + W_{i-1}(weight - x_i \cdot weight_i)\} \\
+         & \forall \ weight \colon weight \in \overline{0,W} \quad  W_0(weight)=0                                                                      \\
+    \end{aligned}
+\]
 \end{document}

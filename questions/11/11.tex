@@ -3,4 +3,119 @@
 
 \begin{document}
 
+\section{Двойственные задачи ЛП в общей форме. Основные теоремы теории двойственности.}
+
+\begin{definition}
+    Рассмотрим задачу ЛП в общей форме:
+    \[
+        F = c_1 x_1 + \ldots + c_n x_n \rightarrow \max
+    \]
+    \[
+        \begin{cases}
+            a_{11} x_1 + a_{12} x_2 + \ldots + a_{1n} x_n \leq b_1 \\
+            \vdots                                                 \\
+            a_{k1} x_1 + a_{k2} x_2 + \ldots + a_{kn} x_n \leq b_k \\
+            \vdots                                                 \\
+            a_{m1} x_1 + a_{m2} x_2 + \ldots + a_{mn} x_n = b_m
+        \end{cases} x_j \geq 0, \quad j = \overline{1, l}, \quad l \leq n
+    \]
+    Задача
+    \[
+        F^* = b_1 y_1 + \ldots + b_m y_m \rightarrow \min
+    \]
+    \[
+        \begin{cases}
+            a_{11} y_1 + a_{21} y_2 + \ldots + a_{m1} y_m \geq c_1 \\
+            \vdots                                                 \\
+            a_{1l} y_1 + a_{2l} y_2 + \ldots + a_{ml} y_m \geq c_l \\
+            \vdots                                                 \\
+            a_{1n} y_1 + a_{2n} y_2 + \ldots + a_{mn} y_m = c_n
+        \end{cases} y_i \geq 0, \quad i = \overline{1, k}, \quad k \leq m
+    \]
+    называется двойственной к исходной задаче ЛП.
+\end{definition}
+
+\begin{center}
+    \begin{tabular}{|p{0.5cm}|p{8cm}|p{8cm}|}
+        \hline
+           & \textbf{Прямая задача}                                   & \textbf{Двойственная задача}                                 \\
+        \hline
+        1  & \( n \) — переменных                                     & \( m \) — переменных                                         \\
+        \hline
+        2  & \( m \) — ограничений                                    & \( n \) — ограничений                                        \\
+        \hline
+        3  & Ищется \( \max \)                                        & Ищется \( \min \)                                            \\
+        \hline
+        4  & \( c \) — вектор коэффициентов целевой функции           & \( b \) — вектор коэффициентов целевой функции               \\
+        \hline
+        5  & \( b \) — вектор свободных членов системы ограничений    & \( c \) — вектор свободных членов системы ограничений        \\
+        \hline
+        6  & \( A \) — матрица коэффициентов системы ограничений      & \( A^T \) — матрица коэффициентов системы ограничений        \\
+        \hline
+        7  & \( x_i \geq 0, \quad j = \overline{1, k} \)              & \( j \)-ое ограничение \( \geq \), \( j = \overline{1, k} \) \\
+        \hline
+        8  & $x_j$ — не ограничена в знаке, $j = \overline{k + 1, n}$ & $j$-ое ограничение =, $j = \overline{k + 1, n}$              \\
+        \hline
+        9  & $i$-ое ограничение \( \leq \), $i = \overline{1, l}$     & $y_i \geq 0, \quad i = \overline{1, l}$                      \\
+        \hline
+        10 & $i$-ое ограничение =, $i = \overline{l + 1, m}$          & $y_i$ — не ограничена в знаке, $i = \overline{l + 1, m}$     \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{theorem}
+    Если одна из пары двойственных задач имеет оптимальное решение, то и другая имеет оптимальное решение,
+    причём значения целевых функций задач при их оптимальных планах равны между собой: \(F(x^*) = F^*(y^*)\).
+    Если же целевая функция одной из пары двойственных задач не ограничена, то другая задача вообще не имеет планов (ОДР пуста).
+
+\end{theorem}
+
+\begin{theorem}
+    $x^* = (x_1^*, \ldots, x_n^*) \quad \text{и} \quad y^* = (y_1^*, \ldots, y_m^*)$ -- оптимальные решения прямой и двойственной задач $\iff$
+    \[
+        \left( \sum_{j=1}^n a_{ij} x_j^* - b_i \right) y_i^* = 0, \quad i = \overline{1, m}
+    \]
+    \[
+        \left( \sum_{i=1}^m a_{ij} y_i^* - c_j \right) x_j^* = 0, \quad j = \overline{1, n}
+    \]
+\end{theorem}
+
+\begin{theorem}
+    \( y^* = C_b A_B^{-1} \)
+\end{theorem}
+
+\begin{proof}
+    Пусть прямая задача:
+    \[
+        F = \langle c, x \rangle \rightarrow \max, \quad Ax = b, \, x \geq 0
+    \]
+    Тогда двойственная:
+    \[
+        F^* = \langle y, b \rangle \rightarrow \min, \quad A^T y \geq c
+    \]
+    Пусть \( x^* \) — оптимальное решение прямой. Тогда:
+    \[
+        A_B x_b^* = b, \quad A_B^{-1} A_B x_b^* = A_B^{-1} b, \quad x_b^* = A_B^{-1} b.
+    \]
+    Подставим \( x^* \) в целевую функцию:
+    \[
+        F = \langle c, x^* \rangle = c_b x_b^* = C_b A_B^{-1} b, \quad C_b A_B^{-1} b = y^* b \Rightarrow y^* = C_b A_B^{-1},
+    \]
+    где:
+    \begin{itemize}
+        \item \( C_b \) — коэффициенты при базисных переменных;
+        \item \( A_B^{-1} \) — обратная матрица к матрице, составленной из компонент векторов, вошедших в оптимальный базис (расположена в первых \( m \) строках последней (оптимальной) симплекс-таблицы, в столбцах векторов, представляющих начальный базис).
+    \end{itemize}
+
+    При этом \( y^* = C_b A_B^{-1} \) находится в строке \( \Delta \).
+\end{proof}
+Установим соответствие между переменными прямой и двойственной задач в симплекс-таблице:
+\begin{itemize}
+    \item основные $X_1 \ldots X_n$
+    \item дополнительные $X_{n+1} \ldots X_{n+m}$
+\end{itemize}
+\begin{itemize}
+    \item дополнительные $Y_{m+1} \ldots Y_{m+n}$
+    \item основные $Y_1 \ldots Y_n$
+\end{itemize}
 \end{document}

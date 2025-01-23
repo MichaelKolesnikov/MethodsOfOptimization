@@ -2,5 +2,194 @@
 \usepackage{../mystyle}
 
 \begin{document}
+\section{Анализ устойчивости двойственных оценок}
 
+\subsection{Максимальные значения целевой функции}
+Будем рассматривать максимальные значения целевой функции прямой задачи как функцию свободных членов системы ограничений:
+\[
+    F_{\max} \left( b_1, \ldots, b_m \right).
+\]
+\begin{proposition}
+    В оптимальном плане двойственной задачи значение переменной \( y_i^* \) численно равно частной производной функции
+    \[
+        F_{\max} \left( b_1, \ldots, b_m \right)
+    \]
+    по соответствующему аргументу:
+    \[
+        \frac{\partial F_{\max}}{\partial b_i} = y_i^*, \quad i = \overline{1, m}.
+    \]
+
+    Двойственные оценки ресурсов показывают,
+    на сколько единиц изменяется доход (\( F \)) от реализации продукции при изменении запаса соответствующего ресурса на одну единицу.
+
+    Большей оценке соответствует наиболее дефицитный ресурс. Для недефицитного ресурса \( y_i^* = 0 \).
+\end{proposition}
+
+\subsection{Интервалы устойчивости}
+Представляет интерес определить такие интервалы изменения \( b_i \), в которых оптимальный план двойственной задачи не меняется.
+\[
+    x_b^* = A_B^{-1}(b + \Delta b) = A_B^{-1}b + A_B^{-1}\Delta b = x_b + A_B^{-1}\Delta b
+\]
+Это имеет место для всех тех значений \( b_i + \Delta b_i \), при которых \( x_b^* \) не содержит отрицательных (т.е. являются допустимым решением).
+\[
+    A_B^{-1}
+    \begin{pmatrix}
+        b_1 + \Delta b_1 \\
+        \vdots           \\
+        b_m + \Delta b_m
+    \end{pmatrix}
+    \geq 0
+\]
+Определим интервалы устойчивости для нашей задачи:
+\[
+    A_B^{-1} =
+    \begin{pmatrix}
+        0 & -\frac{1}{2} & \frac{1}{4}  \\
+        1 & \frac{1}{2}  & -\frac{1}{4} \\
+        0 & 1            & 0
+    \end{pmatrix}, \quad b =
+    \begin{pmatrix}
+        180 \\
+        210 \\
+        800
+    \end{pmatrix}
+\]
+
+\[
+    A_B^{-1}(b + \Delta b) =
+    \begin{pmatrix}
+        0 & -\frac{1}{2} & \frac{1}{4}  \\
+        1 & \frac{1}{2}  & -\frac{1}{4} \\
+        0 & 1            & 0
+    \end{pmatrix}
+    \begin{pmatrix}
+        180 + \Delta b_1 \\
+        210 + \Delta b_2 \\
+        800 + \Delta b_3
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        95 - \frac{1}{2} \cdot \Delta b_2 + \frac{1}{4} \cdot \Delta b_3              \\
+        85 + \Delta b_1 + \frac{1}{2} \cdot \Delta b_2 - \frac{1}{4} \cdot \Delta b_3 \\
+        210 + \Delta b_2
+    \end{pmatrix}
+    \geq 0
+\]
+
+Частные случаи \\
+1) Если \( \Delta b_2 = 0 \), \( \Delta b_3 = 0 \):
+\[
+    85 + \Delta b_1 \geq 0 \Rightarrow \Delta b_1 \geq -85
+\]
+
+2) Если \( \Delta b_1 = 0 \), \( \Delta b_3 = 0 \):
+\[
+    \begin{cases}
+        95 - \frac{1}{2} \cdot \Delta b_2 \geq 0 \\
+        210 + \Delta b_2 \geq 0                  \\
+        85 + \frac{1}{2} \cdot \Delta b_2 \geq 0
+    \end{cases}
+    \quad \begin{cases}
+        \Delta b_2 \leq 190  \\
+        \Delta b_2 \geq -210 \\
+        \Delta b_2 \geq -170
+    \end{cases}
+    \Rightarrow -170 \leq \Delta b_2 \leq 190
+\]
+
+3) Если \( \Delta b_1 = 0 \), \( \Delta b_2 = 0 \):
+\[
+    \begin{cases}
+        95 + \frac{1}{4} \cdot \Delta b_3 \geq 0 \\
+        85 - \frac{1}{4} \cdot \Delta b_3 \geq 0
+    \end{cases}
+    \quad \begin{cases}
+        \Delta b_3 \geq -380 \\
+        \Delta b_3 \leq 340
+    \end{cases}
+    \Rightarrow -380 \leq \Delta b_3 \leq 340
+\]
+$\Rightarrow$ Интервалы изменения ресурсов:
+\[
+    210 - 170 \leq b_2 \leq 210 + 190 \quad 800 - 380 \leq b_3 \leq 800 + 380
+\]
+\[
+    40 \leq b_2 \leq 400 \quad 420 \leq b_3 \leq 1140
+\]
+Первый вид ресурса в оптимальном плане недоиспользован, является недефицитным.
+Увеличение данного ресурса приведёт лишь к росту его остатка. При этом изменений в оптимальном плане не будет, т.к. \( y_1^* = 0 \).
+
+Предельные значения изменения всякого из ресурсов, для которого двойственные оценки остаются неизменными, определяются следующим образом:
+\[
+    \Delta b_i^- = \max_{x_{ji} > 0}
+    \begin{cases}
+        -x_j^* \\
+        x_{ji}
+    \end{cases}
+    \le \Delta b_i \le \min_{x_{ji} < 0}
+    \begin{cases}
+        -95 \\
+        -\frac{1}{2}
+    \end{cases}
+\]
+\[
+    -85 \le \Delta b_1
+\]
+\[
+    -170 \le \Delta b_2 \le 190
+\]
+\[
+    \max_{x_{ji} > 0}
+    \begin{cases}
+        -95 \\
+        \frac{1}{4}
+    \end{cases}
+    \le \Delta b_3 \le
+    \begin{cases}
+        -85 \\
+        -\frac{1}{4}
+    \end{cases}
+    \quad -380 \le \Delta b_3 \le 340
+\]
+
+\subsection{Интервалы устойчивости с точки зрения дохода изделия}
+Аналогично можно определить интервалы устойчивости с точки зрения дохода изделия.
+
+\[
+    \max_{x_{jk} < 0} \left\{
+    \begin{array}{c}
+        x_j^* \\
+        x_{jk}
+    \end{array}
+    \right\} \leq x_k \leq \min_{x_{jk} > 0} \left\{
+    \begin{array}{c}
+        x_j^* \\
+        x_{jk}
+    \end{array}
+    \right\}
+\]
+
+Пример для \( x_3 \) и \( x_4 \):
+
+\[
+    \max \left\{
+    \begin{array}{c}
+        \frac{95}{-\frac{3}{2}}
+    \end{array}
+    \right\} \leq x_3 \leq \min \left\{
+    \begin{array}{c}
+        \frac{85}{\frac{7}{2}}, \frac{210}{3}
+    \end{array}
+    \right\} \quad -60 \leq x_3 \leq \left[ \frac{170}{7} \right] = 24
+\]
+
+\[
+    \max \{Q\} \leq x_4 \leq \min \left\{
+    \begin{array}{c}
+        \frac{85}{1}, \frac{210}{2}
+    \end{array}
+    \right\} = 85 \quad x_4 \leq 85
+\]
+
+\(\Rightarrow\) В производство можно вводить изделие \( C \) до 24 единиц или изделие \( D \) до 85 единиц.
 \end{document}
