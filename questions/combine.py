@@ -1,8 +1,8 @@
-input_files = [f'{i}/{i}.tex' for i in range(1, 27 + 1)]
+input_files = [f'questions/{i}/{i}.tex' for i in range(1, 27 + 1)]
 begin = r'\begin{document}'
 end = r"\end{document}"
 
-with open("combined/combined.tex", 'w', encoding='utf-8') as outfile:
+with open("questions/combined/combined.tex", 'w', encoding='utf-8') as outfile:
     outfile.write('\documentclass[17pt]{extarticle}\n')
     outfile.write(r"\usepackage{../mystyle}" + '\n')
 

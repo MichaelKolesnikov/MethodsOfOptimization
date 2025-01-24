@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.1.13)  24 JAN 2025 13:12
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.1.13)  24 JAN 2025 13:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/user_name/VScodeProjects/MethodsOfOptimization/questions/26/26
-(/home/user_name/VScodeProjects/MethodsOfOptimization/questions/26/26.tex
+**/home/user_name/VScodeProjects/MethodsOfOptimization/questions/combined/combined
+(/home/user_name/VScodeProjects/MethodsOfOptimization/questions/combined/combined.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/extsizes/extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
@@ -523,86 +523,86 @@ File: pgflibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfnodepartfivebox=\box93
 ))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)) (./26.aux)
-\openout1 = `26.aux'.
+)) (./combined.aux)
+\openout1 = `combined.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 4.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 4.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 4.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 4.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 4.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 4.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 4.
-LaTeX Font Info:    Redeclaring math accent \check on input line 4.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 4.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 4.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 4.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 4.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 3.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 3.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 3.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 3.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 3.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 3.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 3.
+LaTeX Font Info:    Redeclaring math accent \check on input line 3.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 3.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 3.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 3.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 3.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 4.
+(Font)              `operators' in the math version `normal' on input line 3.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 4.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 3.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 4.
+(Font)              `operators' in the math version `bold' on input line 3.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 4.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 3.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on input line 4.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on input line 3.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line 4.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line 3.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 4.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 3.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 4.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 3.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 4.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 3.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on input line 4.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on input line 3.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input line 4.
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input line 3.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 4.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 3.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 4.
-LaTeX Info: Redefining \th on input line 4.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 3.
+LaTeX Info: Redefining \th on input line 3.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -638,23 +638,111 @@ LaTeX Info: Redefining \th on input line 4.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+[1
+
+]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+) [2] [3] [4] [5] [6] [7] [8] [9]
+Overfull \hbox (23.24937pt too wide) detected at line 406
+[]
+ []
 
-] (./26.aux) ) 
+File: 9.png Graphic file (type bmp)
+<9.png>
+[10] [11] [12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 596--597
+[]|$\OML/cmm/m/it/17.28 j$\TU/TimesNewRoman(0)/m/n/17.28 -ое ограничение =,
+ []
+
+
+Overfull \hbox (3.05363pt too wide) in paragraph at lines 600--600
+[]|\TU/TimesNewRoman(0)/m/n/17.28 10| 
+ []
+
+[14] [15]
+Overfull \hbox (0.522pt too wide) in paragraph at lines 663--663
+|[]\TU/TimesNewRoman(0)/b/n/20.74 Задача об оптимальном плане производства продукции| 
+ []
+
+[16] [17]
+Overfull \hbox (2.08119pt too wide) in paragraph at lines 795--798
+[]\TU/TimesNewRoman(0)/m/n/17.28 Первое и второе ограничения выполняются как «$\OT1/cmr/m/n/17.28 =$\TU/TimesNewRoman(0)/m/n/17.28 » $\OMS/cmsy/m/n/17.28 )$ \TU/TimesNewRoman(0)/m/n/17.28 двойственные оцен-
+ []
+
+[18] [19]
+Overfull \hbox (21.99307pt too wide) detected at line 908
+\OML/cmm/m/it/17.28 A[]\OT1/cmr/m/n/17.28 (\OML/cmm/m/it/17.28 b \OT1/cmr/m/n/17.28 + ^^A\OML/cmm/m/it/17.28 b\OT1/cmr/m/n/17.28 ) = [] [] = [] \OMS/cmsy/m/n/17.28 ^^U \OT1/cmr/m/n/17.28 0
+ []
+
+[20] [21] [22] [23]
+Overfull \hbox (9.99506pt too wide) in paragraph at lines 1103--1104
+[]\TU/TimesNewRoman(0)/m/n/17.28 Любая транспортная задача, как задача ЛП, может быть решена симплекс-
+ []
+
+[24]
+Overfull \hbox (5.82523pt too wide) in paragraph at lines 1121--1121
+|[]\TU/TimesNewRoman(0)/b/n/24.88 Методы северо-западного угла и минимальных
+ []
+
+
+Overfull \hbox (5.3998pt too wide) in paragraph at lines 1156--1156
+|[]\TU/TimesNewRoman(0)/b/n/20.74 Пример заполнения таблицы методом северо-западного
+ []
+
+[25] [26] [27] [28]
+Overfull \hbox (3.4887pt too wide) in paragraph at lines 1355--1355
+|[]\TU/TimesNewRoman(0)/b/n/24.88 Задачи целочисленного линейного программи-
+ []
+
+[29] [30] [31] [32] [33] [34] [35] [36] [37] [38]
+Underfull \hbox (badness 10000) in paragraph at lines 1777--1780
+
+ []
+
+[39] [40] [41]
+Overfull \hbox (3.4887pt too wide) in paragraph at lines 1914--1914
+|[]\TU/TimesNewRoman(0)/b/n/24.88 Задачи целочисленного линейного программи-
+ []
+
+[42]
+Overfull \hbox (0.21155pt too wide) in paragraph at lines 1976--1976
+|[]\TU/TimesNewRoman(0)/b/n/20.74 Условия, которым должна удовлетворять задача, реша-
+ []
+
+[43] [44] [45]
+Overfull \hbox (24.83525pt too wide) detected at line 2102
+\OML/cmm/m/it/17.28 W[]\OT1/cmr/m/n/17.28 (\OML/cmm/m/it/17.28 S[]\OT1/cmr/m/n/17.28 ) = [] [] \OML/cmm/m/it/17.28 f[]\OT1/cmr/m/n/17.28 (\OML/cmm/m/it/17.28 S[]; X[]\OT1/cmr/m/n/17.28 ) \OMS/cmsy/m/n/17.28 ) \OML/cmm/m/it/17.28 W[]\OT1/cmr/m/n/17.28 (\OML/cmm/m/it/17.28 S[]\OT1/cmr/m/n/17.28 ) = [] [] \OML/cmm/m/it/17.28 f[]\OT1/cmr/m/n/17.28 (\OML/cmm/m/it/17.28 S[]; X[]\OT1/cmr/m/n/17.28 )
+ []
+
+[46] [47] [48]
+Underfull \hbox (badness 10000) in paragraph at lines 2221--2226
+
+ []
+
+[49]
+Overfull \hbox (6.0925pt too wide) in paragraph at lines 2280--2280
+|[]\TU/TimesNewRoman(0)/b/n/24.88 Геометрический способ решения двумерной за-
+ []
+
+[50]
+Overfull \hbox (1.20479pt too wide) in paragraph at lines 2321--2321
+|[]\TU/TimesNewRoman(0)/b/n/24.88 Классическая задача нелинейного программи-
+ []
+
+[51] [52] [53] (./combined.aux) ) 
 Here is how much of TeX's memory you used:
- 18724 strings out of 477416
- 418251 string characters out of 5844818
- 765959 words of memory out of 5000000
- 39023 multiletter control sequences out of 15000+600000
- 472894 words of font info for 59 fonts, out of 8000000 for 9000
+ 18936 strings out of 477416
+ 422648 string characters out of 5844818
+ 772055 words of memory out of 5000000
+ 39225 multiletter control sequences out of 15000+600000
+ 472950 words of font info for 66 fonts, out of 8000000 for 9000
  682 hyphenation exceptions out of 8191
- 99i,5n,94p,493b,216s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,16n,94p,521b,751s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 26.pdf (1 page).
+Output written on combined.pdf (53 pages).

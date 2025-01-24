@@ -2,7 +2,7 @@ input_files = [f'{i}/{i}.tex' for i in range(1, 22 + 1)]
 begin = r'\begin{document}'
 end = r"\end{document}"
 
-with open("/home/user_name/VScodeProjects/MethodsOfOptimization/old_questions/combined/combined.tex", 'w', encoding='utf-8') as outfile:
+with open("/home/user_name/VScodeProjects/MethodsOfOptimization/old_questions/combined/old_combined.tex", 'w', encoding='utf-8') as outfile:
     outfile.write('\documentclass[17pt]{extarticle}\n')
     outfile.write(r"\usepackage{../mystyle}" + '\n')
 
